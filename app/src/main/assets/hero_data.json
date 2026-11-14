@@ -1,0 +1,515 @@
+[
+  {
+    "id": "alucard",
+    "name": "Alucard",
+    "title": "Demon Hunter",
+    "roles": ["FIGHTER", "ASSASSIN"],
+    "lanes": ["EXP", "JUNGLE"],
+    "difficulty": "EASY",
+    "description": "Alucard adalah fighter/assassin yang memiliki lifesteal tinggi dan kemampuan mengejar musuh. Cocok untuk pemula karena mekanisme yang sederhana namun tetap kuat.",
+    "icon_url": "",
+    "skills": [
+      {"key": "PASSIVE", "name": "Chase Fate", "description": "Setiap kali Alucard menggunakan skill, serangan berikutnya memiliki jangkauan lebih jauh.", "cooldown": [], "mana_cost": [], "type": "PASSIVE"},
+      {"key": "SKILL_1", "name": "Groundsplitter", "description": "Alucard melompat ke arah yang ditentukan dan memberikan damage ke area.", "cooldown": [11, 10, 9, 8, 7, 6], "mana_cost": [70, 70, 70, 70, 70, 70], "type": "ACTIVE"},
+      {"key": "SKILL_2", "name": "Whirling Smash", "description": "Alucard berputar memberikan damage ke semua musuh di sekitarnya.", "cooldown": [4, 4, 4, 4, 4, 4], "mana_cost": [50, 50, 50, 50, 50, 50], "type": "ACTIVE"},
+      {"key": "ULTIMATE", "name": "Fission Wave", "description": "Alucard berkonsentrasi untuk meningkatkan lifesteal dan melepaskan gelombang energi.", "cooldown": [40, 35, 30], "mana_cost": [100, 100, 100], "type": "ACTIVE"}
+    ],
+    "builds": [
+      {"id": "alucard_early", "name": "Early Game", "phase": "EARLY", "items": [
+        {"id": "warrior_boots", "name": "Warrior Boots", "price": 690},
+        {"id": "bloodlust_axe", "name": "Bloodlust Axe", "price": 1970},
+        {"id": "endless_battle", "name": "Endless Battle", "price": 2470}
+      ], "description": "Prioritas lifesteal dari early game"},
+      {"id": "alucard_late", "name": "Full Build", "phase": "LATE", "items": [
+        {"id": "warrior_boots", "name": "Warrior Boots", "price": 690},
+        {"id": "bloodlust_axe", "name": "Bloodlust Axe", "price": 1970},
+        {"id": "endless_battle", "name": "Endless Battle", "price": 2470},
+        {"id": "blade_of_despair", "name": "Blade of Despair", "price": 3010},
+        {"id": "brute_force", "name": "Brute Force Breastplate", "price": 2060},
+        {"id": "immortality", "name": "Immortality", "price": 2120}
+      ], "description": "Full damage build dengan survival"}
+    ],
+    "emblem": {"name": "Assassin", "tier": 3, "talents": ["Bounty Hunter", "Killing Spree"]},
+    "spells": ["Inspire", "Retribution"],
+    "counters": ["franco", "tigreal", "chou"],
+    "strong_against": ["layla", "miya", "harith"],
+    "tips": [
+      "Gunakan Skill 1 untuk engage, lalu ikuti dengan Skill 2",
+      "Aktifkan Ultimate saat HP rendah untuk heal besar",
+      "Hindari tim fight, fokus pada target lemah",
+      "Lifesteal Alucard sangat tinggi — jangan takut fight 1v1"
+    ],
+    "combos": [
+      {
+        "id": "alucard_basic_combo",
+        "name": "Standard Chase Combo",
+        "description": "Combo standar untuk mengejar dan membunuh target",
+        "steps": [
+          {"order": 1, "skill_key": "SKILL_1", "description": "Gunakan Groundsplitter untuk mendekati musuh", "timing": "Saat musuh terisolasi"},
+          {"order": 2, "skill_key": "SKILL_2", "description": "Whirling Smash untuk damage area", "timing": "Langsung setelah skill 1 landing"},
+          {"order": 3, "skill_key": "ULTIMATE", "description": "Aktifkan Fission Wave jika HP rendah atau untuk execute", "timing": "Saat musuh HP < 30%"},
+          {"order": 4, "skill_key": "SKILL_1", "description": "Groundsplitter lagi untuk chase jika musuh kabur", "timing": "Jika musuh lari"}
+        ],
+        "difficulty": "EASY",
+        "notes": "Skill 1 reset setiap kill — kejar terus musuh yang kabur"
+      }
+    ]
+  },
+  {
+    "id": "gusion",
+    "name": "Gusion",
+    "title": "Holy Blade",
+    "roles": ["ASSASSIN"],
+    "lanes": ["JUNGLE", "MID"],
+    "difficulty": "VERY_HARD",
+    "description": "Gusion adalah assassin burst damage yang membutuhkan penguasaan combo tinggi. Dalam tangan yang benar, ia bisa membunuh siapapun dalam hitungan detik.",
+    "icon_url": "",
+    "skills": [
+      {"key": "PASSIVE", "name": "Dagger Specialist", "description": "Basic attack Gusion mengeluarkan dagger yang meningkatkan damage skill berikutnya.", "cooldown": [], "mana_cost": [], "type": "PASSIVE"},
+      {"key": "SKILL_1", "name": "Sword Spike", "description": "Melempar dagger ke arah musuh. Bisa di-recall untuk blink ke posisi dagger.", "cooldown": [12, 11, 10, 9, 8, 7], "mana_cost": [65, 65, 65, 65, 65, 65], "type": "ACTIVE"},
+      {"key": "SKILL_2", "name": "Shadowblade Slaughter", "description": "Melempar beberapa dagger ke sekitar. Dagger bisa di-recall.", "cooldown": [7, 6.5, 6, 5.5, 5, 4.5], "mana_cost": [80, 80, 80, 80, 80, 80], "type": "ACTIVE"},
+      {"key": "ULTIMATE", "name": "Incandescence", "description": "Reset cooldown Skill 1 dan 2. Gusion menjadi lebih kuat sementara.", "cooldown": [32, 28, 24], "mana_cost": [120, 120, 120], "type": "ACTIVE"}
+    ],
+    "builds": [
+      {"id": "gusion_full", "name": "Full Burst Build", "phase": "LATE", "items": [
+        {"id": "arcane_boots", "name": "Arcane Boots", "price": 720},
+        {"id": "calamity_reaper", "name": "Calamity Reaper", "price": 1950},
+        {"id": "feather_of_heaven", "name": "Feather of Heaven", "price": 2100},
+        {"id": "concentrated_energy", "name": "Concentrated Energy", "price": 2020},
+        {"id": "holy_crystal", "name": "Holy Crystal", "price": 2180},
+        {"id": "divine_glaive", "name": "Divine Glaive", "price": 1970}
+      ], "description": "Maximum magic burst damage"}
+    ],
+    "emblem": {"name": "Assassin", "tier": 3, "talents": ["Killing Spree", "Bounty Hunter"]},
+    "spells": ["Execute", "Retribution"],
+    "counters": ["eudora", "kadita", "pharsa"],
+    "strong_against": ["layla", "miya", "irithel"],
+    "tips": [
+      "Pelajari full combo: S2 → AA → S1 → S1 recall → Ult → S2 → AA → S1 → S1 recall",
+      "Selalu cek posisi sebelum recall dagger",
+      "Gusion sangat mana-hungry — atur penggunaan skill",
+      "Satu-satunya cara menguasai Gusion adalah latihan combo berulang kali"
+    ],
+    "combos": [
+      {
+        "id": "gusion_full_combo",
+        "name": "Full Burst Combo",
+        "description": "Combo penuh untuk one-shot target squishy",
+        "steps": [
+          {"order": 1, "skill_key": "SKILL_2", "description": "Shadowblade Slaughter ke target", "timing": "Dari jarak aman"},
+          {"order": 2, "skill_key": "SKILL_1", "description": "Sword Spike ke target", "timing": "Langsung setelah S2"},
+          {"order": 3, "skill_key": "SKILL_1", "description": "Recall Sword Spike (tekan lagi) untuk blink ke target", "timing": "Saat dagger sudah tiba"},
+          {"order": 4, "skill_key": "ULTIMATE", "description": "Incandescence untuk reset CD", "timing": "Langsung setelah blink"},
+          {"order": 5, "skill_key": "SKILL_2", "description": "Shadowblade Slaughter kedua", "timing": "Setelah ult aktif"},
+          {"order": 6, "skill_key": "SKILL_1", "description": "Sword Spike + recall lagi", "timing": "Finisher"}
+        ],
+        "difficulty": "VERY_HARD",
+        "notes": "Timing recall adalah kunci. Latihan di training mode dulu!"
+      }
+    ]
+  },
+  {
+    "id": "chou",
+    "name": "Chou",
+    "title": "The King of Fighter",
+    "roles": ["FIGHTER"],
+    "lanes": ["EXP", "ROAM"],
+    "difficulty": "HARD",
+    "description": "Chou adalah fighter versatile dengan CC yang kuat. Ia bisa menjadi initiator, peeling support, atau damage dealer tergantung situasi.",
+    "icon_url": "",
+    "skills": [
+      {"key": "PASSIVE", "name": "Only Fast", "description": "Setiap 8 basic attack, Chou mendapatkan immune terhadap slow untuk 3 detik.", "cooldown": [], "mana_cost": [], "type": "PASSIVE"},
+      {"key": "SKILL_1", "name": "Jeet Kune Do", "description": "Chou melakukan 3 serangan yang bisa dikombinasikan.", "cooldown": [9, 8.5, 8, 7.5, 7, 6.5], "mana_cost": [50, 50, 50, 50, 50, 50], "type": "ACTIVE"},
+      {"key": "SKILL_2", "name": "Shunpo", "description": "Chou blink ke arah target dan menendang musuh. Immune CC saat blink.", "cooldown": [18, 17, 16, 15, 14, 13], "mana_cost": [80, 80, 80, 80, 80, 80], "type": "ACTIVE"},
+      {"key": "ULTIMATE", "name": "The Way of Dragon", "description": "Chou menendang musuh ke udara dan memberikan damage besar. Bisa digunakan setelah Skill 2.", "cooldown": [46, 42, 38], "mana_cost": [100, 100, 100], "type": "ACTIVE"}
+    ],
+    "builds": [
+      {"id": "chou_fighter", "name": "Fighter Build", "phase": "LATE", "items": [
+        {"id": "warrior_boots", "name": "Warrior Boots", "price": 690},
+        {"id": "endless_battle", "name": "Endless Battle", "price": 2470},
+        {"id": "hunter_strike", "name": "Hunter Strike", "price": 1960},
+        {"id": "blade_of_despair", "name": "Blade of Despair", "price": 3010},
+        {"id": "brute_force", "name": "Brute Force Breastplate", "price": 2060},
+        {"id": "immortality", "name": "Immortality", "price": 2120}
+      ], "description": "Balance damage dan survival"}
+    ],
+    "emblem": {"name": "Fighter", "tier": 3, "talents": ["Festival of Blood", "Disabling Strike"]},
+    "spells": ["Flicker", "Vengeance"],
+    "counters": ["eudora", "aurora", "cyclops"],
+    "strong_against": ["layla", "miya", "aldous"],
+    "tips": [
+      "Combo inti: S2 → Ult adalah lemparan yang sangat powerful",
+      "Gunakan S1 untuk farming dan poking sebelum engage",
+      "Immune CC saat Skill 2 — timing tepat bisa menghindari CC besar",
+      "Chou sangat baik untuk isolasi target belakang musuh"
+    ],
+    "combos": [
+      {
+        "id": "chou_kick_combo",
+        "name": "Kick & Launch Combo",
+        "description": "Combo signature Chou untuk meluncurkan musuh ke belakang tim",
+        "steps": [
+          {"order": 1, "skill_key": "SKILL_2", "description": "Shunpo ke target (immune CC saat ini)", "timing": "Saat musuh tidak dalam crowd"},
+          {"order": 2, "skill_key": "ULTIMATE", "description": "The Way of Dragon — luncurkan target ke tim kamu", "timing": "Langsung setelah Shunpo landing"},
+          {"order": 3, "skill_key": "SKILL_1", "description": "Jeet Kune Do untuk damage tambahan", "timing": "Follow up setelah ult"}
+        ],
+        "difficulty": "HARD",
+        "notes": "Arahkan tendangan Ult ke dalam tim kamu, bukan ke luar map!"
+      }
+    ]
+  },
+  {
+    "id": "franco",
+    "name": "Franco",
+    "title": "Frozen Warrior",
+    "roles": ["TANK"],
+    "lanes": ["ROAM"],
+    "difficulty": "MODERATE",
+    "description": "Franco adalah tank initiator yang memiliki hook berbahaya. Satu hook yang tepat bisa membalikkan keadaan pertandingan.",
+    "icon_url": "",
+    "skills": [
+      {"key": "PASSIVE", "name": "Wasteland Force", "description": "Franco secara pasif memulihkan HP saat berjalan.", "cooldown": [], "mana_cost": [], "type": "PASSIVE"},
+      {"key": "SKILL_1", "name": "Iron Hook", "description": "Melempar hook yang menarik musuh pertama yang kena ke arah Franco.", "cooldown": [12, 12, 12, 12, 12, 12], "mana_cost": [100, 100, 100, 100, 100, 100], "type": "ACTIVE"},
+      {"key": "SKILL_2", "name": "Fury Shock", "description": "Franco berteriak yang memperlambat musuh di sekitarnya.", "cooldown": [3, 3, 3, 3, 3, 3], "mana_cost": [30, 30, 30, 30, 30, 30], "type": "ACTIVE"},
+      {"key": "ULTIMATE", "name": "Bloody Hunt", "description": "Franco menekan target ke tanah dan memberikan damage selama 2 detik.", "cooldown": [42, 40, 38], "mana_cost": [120, 120, 120], "type": "ACTIVE"}
+    ],
+    "builds": [
+      {"id": "franco_tank", "name": "Full Tank Build", "phase": "LATE", "items": [
+        {"id": "courage_mask", "name": "Courage Mask", "price": 890},
+        {"id": "warrior_boots", "name": "Warrior Boots", "price": 690},
+        {"id": "dominance_ice", "name": "Dominance Ice", "price": 2010},
+        {"id": "oracle", "name": "Oracle", "price": 2080},
+        {"id": "antique_cuirass", "name": "Antique Cuirass", "price": 2170},
+        {"id": "immortality", "name": "Immortality", "price": 2120}
+      ], "description": "Maximum tankiness dan CC"}
+    ],
+    "emblem": {"name": "Tank", "tier": 3, "talents": ["Concussive Blast", "Brave Smite"]},
+    "spells": ["Flicker", "Sprint"],
+    "counters": ["alucard", "ruby", "jawhead"],
+    "strong_against": ["layla", "miya", "irithel"],
+    "tips": [
+      "Posisi di bush untuk hook kejutan",
+      "Jangan spam hook — pilih waktu yang tepat",
+      "Setelah hook, langsung Ultimate sebelum CD habis",
+      "Koordinasi dengan tim sebelum hook — pastikan mereka siap follow up"
+    ],
+    "combos": [
+      {
+        "id": "franco_hook_combo",
+        "name": "Hook & Lock Combo",
+        "description": "Combo engage standar Franco",
+        "steps": [
+          {"order": 1, "skill_key": "SKILL_1", "description": "Iron Hook ke target prioritas", "timing": "Dari bush atau saat musuh tidak aware"},
+          {"order": 2, "skill_key": "ULTIMATE", "description": "Bloody Hunt langsung setelah hook landing", "timing": "Segera setelah musuh tertarik"},
+          {"order": 3, "skill_key": "SKILL_2", "description": "Fury Shock untuk slow saat Ult habis", "timing": "Setelah Ult selesai"}
+        ],
+        "difficulty": "MODERATE",
+        "notes": "Hook yang meleset = kamu jadi sasaran. Pastikan posisi aman sebelum hook."
+      }
+    ]
+  },
+  {
+    "id": "lancelot",
+    "name": "Lancelot",
+    "title": "Phantom Assassin",
+    "roles": ["ASSASSIN"],
+    "lanes": ["JUNGLE"],
+    "difficulty": "HARD",
+    "description": "Lancelot adalah assassin mobility tinggi yang sulit dikenai CC. Dengan immune terhadap damage saat menggunakan skill, ia sangat susah dibunuh jika dimainkan dengan benar.",
+    "icon_url": "",
+    "skills": [
+      {"key": "PASSIVE", "name": "Transcendence", "description": "Saat HP Lancelot di bawah 40%, mendapat shield.", "cooldown": [], "mana_cost": [], "type": "PASSIVE"},
+      {"key": "SKILL_1", "name": "Puncture", "description": "Lancelot menusuk ke depan dan immune terhadap damage saat casting.", "cooldown": [10, 9, 8, 7, 6, 5], "mana_cost": [60, 60, 60, 60, 60, 60], "type": "ACTIVE"},
+      {"key": "SKILL_2", "name": "Thorned Rose", "description": "Lancelot melakukan beberapa tusukan dalam pola X. Immune damage saat casting.", "cooldown": [9, 8.5, 8, 7.5, 7, 6.5], "mana_cost": [70, 70, 70, 70, 70, 70], "type": "ACTIVE"},
+      {"key": "ULTIMATE", "name": "Phantom Execution", "description": "Lancelot meluncur ke depan memberikan damage besar. Immune damage saat casting.", "cooldown": [40, 35, 30], "mana_cost": [100, 100, 100], "type": "ACTIVE"}
+    ],
+    "builds": [
+      {"id": "lancelot_full", "name": "Full Physical Build", "phase": "LATE", "items": [
+        {"id": "jungle_item", "name": "Raptor Machete", "price": 1600},
+        {"id": "tough_boots", "name": "Tough Boots", "price": 780},
+        {"id": "hunter_strike", "name": "Hunter Strike", "price": 1960},
+        {"id": "blade_of_despair", "name": "Blade of Despair", "price": 3010},
+        {"id": "malefic_roar", "name": "Malefic Roar", "price": 2060},
+        {"id": "immortality", "name": "Immortality", "price": 2120}
+      ], "description": "Maximum burst physical damage"}
+    ],
+    "emblem": {"name": "Assassin", "tier": 3, "talents": ["Killing Spree", "High and Dry"]},
+    "spells": ["Retribution", "Execute"],
+    "counters": ["khufra", "atlas", "franco"],
+    "strong_against": ["layla", "miya", "pharsa"],
+    "tips": [
+      "Gunakan skill saat kena CC untuk immune damage (timing tepat)",
+      "S1 bisa digunakan untuk escape juga",
+      "Prioritas target: Mage > Marksman > Support",
+      "Jangan engage saat cooldown semua skill"
+    ],
+    "combos": [
+      {
+        "id": "lancelot_basic",
+        "name": "Standard Jungle Gank",
+        "description": "Combo standar untuk gank dari jungle",
+        "steps": [
+          {"order": 1, "skill_key": "SKILL_1", "description": "Puncture untuk approach target", "timing": "Dari angle yang tidak terduga"},
+          {"order": 2, "skill_key": "SKILL_2", "description": "Thorned Rose untuk burst damage", "timing": "Saat sudah di range target"},
+          {"order": 3, "skill_key": "ULTIMATE", "description": "Phantom Execution untuk execute atau finish", "timing": "Saat target HP < 50%"}
+        ],
+        "difficulty": "HARD",
+        "notes": "Pelajari kapan menggunakan skill sebagai immune vs damage"
+      }
+    ]
+  },
+  {
+    "id": "kagura",
+    "name": "Kagura",
+    "title": "Onmyouji Lady",
+    "roles": ["MAGE"],
+    "lanes": ["MID"],
+    "difficulty": "VERY_HARD",
+    "description": "Kagura adalah mage kompleks dengan mekanisme parasol (payung) unik. Membutuhkan pemahaman mendalam tentang posisi parasol untuk maximize damage dan mobility.",
+    "icon_url": "",
+    "skills": [
+      {"key": "PASSIVE", "name": "Yin Yang Overturn", "description": "Mengubah efek skill berdasarkan posisi parasol (terpasang/terpisah).", "cooldown": [], "mana_cost": [], "type": "PASSIVE"},
+      {"key": "SKILL_1", "name": "Seimei Umbrella Open", "description": "Mode tanpa parasol: blink ke parasol. Mode dengan parasol: lempar parasol ke depan.", "cooldown": [8, 7.5, 7, 6.5, 6, 5.5], "mana_cost": [65, 65, 65, 65, 65, 65], "type": "ACTIVE"},
+      {"key": "SKILL_2", "name": "Rasho Umbrella Flee", "description": "Memberikan damage AoE di sekitar Kagura atau parasol.", "cooldown": [10, 9.5, 9, 8.5, 8, 7.5], "mana_cost": [80, 80, 80, 80, 80, 80], "type": "ACTIVE"},
+      {"key": "ULTIMATE", "name": "Yin Yang Overturn", "description": "Menarik semua musuh yang terkena efek Kagura menuju parasol.", "cooldown": [42, 38, 34], "mana_cost": [100, 100, 100], "type": "ACTIVE"}
+    ],
+    "builds": [
+      {"id": "kagura_full", "name": "Full Magic Build", "phase": "LATE", "items": [
+        {"id": "arcane_boots", "name": "Arcane Boots", "price": 720},
+        {"id": "clock_of_destiny", "name": "Clock of Destiny", "price": 1950},
+        {"id": "lightning_truncheon", "name": "Lightning Truncheon", "price": 2000},
+        {"id": "concentrated_energy", "name": "Concentrated Energy", "price": 2020},
+        {"id": "holy_crystal", "name": "Holy Crystal", "price": 2180},
+        {"id": "genius_wand", "name": "Genius Wand", "price": 1870}
+      ], "description": "Maximum magic power dan magic pen"}
+    ],
+    "emblem": {"name": "Mage", "tier": 3, "talents": ["Mystery Shop", "Magic Worship"]},
+    "spells": ["Flicker", "Purify"],
+    "counters": ["gusion", "ling", "lancelot"],
+    "strong_against": ["layla", "miya", "roger"],
+    "tips": [
+      "Pelajari 2 mode skill berdasarkan posisi parasol",
+      "Gunakan parasol sebagai escape atau decoy",
+      "Ult + S2 combo sangat mematikan dalam team fight",
+      "Kagura butuh banyak latihan — jangan frustasi di awal"
+    ],
+    "combos": [
+      {
+        "id": "kagura_full_combo",
+        "name": "Full Rotation Combo",
+        "description": "Combo rotasi penuh menggunakan kedua mode parasol",
+        "steps": [
+          {"order": 1, "skill_key": "SKILL_1", "description": "Lempar parasol ke target", "timing": "Dari jarak aman"},
+          {"order": 2, "skill_key": "SKILL_2", "description": "Damage di sekitar parasol", "timing": "Saat parasol di dekat musuh"},
+          {"order": 3, "skill_key": "SKILL_1", "description": "Blink ke parasol (mendekati target)", "timing": "Follow up"},
+          {"order": 4, "skill_key": "ULTIMATE", "description": "Tarik musuh ke parasol/Kagura", "timing": "Saat musuh sudah di posisi"},
+          {"order": 5, "skill_key": "SKILL_2", "description": "Damage AoE kedua", "timing": "Setelah Ult"}
+        ],
+        "difficulty": "VERY_HARD",
+        "notes": "Perhatikan posisi parasol di SEMUA WAKTU"
+      }
+    ]
+  },
+  {
+    "id": "tigreal",
+    "name": "Tigreal",
+    "title": "Warrior of Dawn",
+    "roles": ["TANK"],
+    "lanes": ["ROAM"],
+    "difficulty": "EASY",
+    "description": "Tigreal adalah tank initiator yang paling ramah pemula. Memiliki CC kuat dan Ultimate yang bisa mengumpulkan seluruh tim musuh.",
+    "icon_url": "",
+    "skills": [
+      {"key": "PASSIVE", "name": "Fearless", "description": "Tigreal mendapat shield saat menerima damage dari arah depan.", "cooldown": [], "mana_cost": [], "type": "PASSIVE"},
+      {"key": "SKILL_1", "name": "Attack Wave", "description": "Mengeluarkan gelombang serangan yang mendorong musuh ke belakang.", "cooldown": [8, 7.5, 7, 6.5, 6, 5.5], "mana_cost": [70, 70, 70, 70, 70, 70], "type": "ACTIVE"},
+      {"key": "SKILL_2", "name": "Sacred Hammer", "description": "Tigreal bergerak ke arah yang ditentukan dan menarik musuh yang terkena.", "cooldown": [12, 11, 10, 9, 8, 7], "mana_cost": [80, 80, 80, 80, 80, 80], "type": "ACTIVE"},
+      {"key": "ULTIMATE", "name": "Implosion", "description": "Tigreal menarik semua musuh di sekitarnya ke tengah dan melakukan stun.", "cooldown": [46, 44, 42], "mana_cost": [150, 150, 150], "type": "ACTIVE"}
+    ],
+    "builds": [
+      {"id": "tigreal_tank", "name": "Full Tank Build", "phase": "LATE", "items": [
+        {"id": "courage_mask", "name": "Courage Mask", "price": 890},
+        {"id": "tough_boots", "name": "Tough Boots", "price": 780},
+        {"id": "cursed_helmet", "name": "Cursed Helmet", "price": 1970},
+        {"id": "dominance_ice", "name": "Dominance Ice", "price": 2010},
+        {"id": "oracle", "name": "Oracle", "price": 2080},
+        {"id": "immortality", "name": "Immortality", "price": 2120}
+      ], "description": "Maximum CC dan survival"}
+    ],
+    "emblem": {"name": "Tank", "tier": 3, "talents": ["Concussive Blast", "Brave Smite"]},
+    "spells": ["Flicker", "Aegis"],
+    "counters": ["khufra", "atlas", "diggie"],
+    "strong_against": ["layla", "miya", "pharsa"],
+    "tips": [
+      "Gunakan Flicker saat Ult untuk surprise engage",
+      "S2 bisa digunakan untuk escape saat dikejar",
+      "Koordinasi ultimate dengan tim — pastikan mereka siap burst",
+      "Jangan engage sendirian — tunggu tim siap"
+    ],
+    "combos": [
+      {
+        "id": "tigreal_flicker_ult",
+        "name": "Flicker Ultimate Combo",
+        "description": "Engage kejutan menggunakan Flicker + Ult",
+        "steps": [
+          {"order": 1, "skill_key": "SKILL_2", "description": "Sacred Hammer ke tengah musuh", "timing": "Saat tim siap follow up"},
+          {"order": 2, "skill_key": "ULTIMATE", "description": "Implosion + Flicker untuk kumpulkan lebih banyak musuh", "timing": "Langsung setelah S2, gunakan Flicker di tengah casting Ult"},
+          {"order": 3, "skill_key": "SKILL_1", "description": "Attack Wave untuk tambahan damage dan CC", "timing": "Setelah Ult landing"}
+        ],
+        "difficulty": "MODERATE",
+        "notes": "Timing Flicker di tengah Ult adalah kunci combo ini!"
+      }
+    ]
+  },
+  {
+    "id": "angela",
+    "name": "Angela",
+    "title": "Lovely Robot",
+    "roles": ["SUPPORT"],
+    "lanes": ["ROAM"],
+    "difficulty": "MODERATE",
+    "description": "Angela adalah support healer yang bisa menyatu dengan ally menggunakan Ultimate. Kemampuan proteksi dan healinya sangat kuat untuk melindungi carry.",
+    "icon_url": "",
+    "skills": [
+      {"key": "PASSIVE", "name": "Love Waves", "description": "Angela meninggalkan jejak yang memperlambat musuh.", "cooldown": [], "mana_cost": [], "type": "PASSIVE"},
+      {"key": "SKILL_1", "name": "Love Waves", "description": "Melempar skill yang bisa menyembuhkan ally atau mendamage musuh. Tekan lagi untuk memperpanjang.", "cooldown": [3, 3, 3, 3, 3, 3], "mana_cost": [50, 50, 50, 50, 50, 50], "type": "ACTIVE"},
+      {"key": "SKILL_2", "name": "Puppet-On-A-String", "description": "Tali yang memperlambat musuh. Jika terkena beberapa kali, musuh akan diimmobilize.", "cooldown": [9, 8.5, 8, 7.5, 7, 6.5], "mana_cost": [70, 70, 70, 70, 70, 70], "type": "ACTIVE"},
+      {"key": "ULTIMATE", "name": "Heartguard", "description": "Angela terbang ke ally dan menyatu dengan mereka, memberikan shield dan meningkatkan kemampuan.", "cooldown": [50, 45, 40], "mana_cost": [200, 200, 200], "type": "ACTIVE"}
+    ],
+    "builds": [
+      {"id": "angela_support", "name": "Support Build", "phase": "LATE", "items": [
+        {"id": "courage_mask", "name": "Courage Mask", "price": 890},
+        {"id": "magic_shoes", "name": "Magic Shoes", "price": 710},
+        {"id": "fleeting_time", "name": "Fleeting Time", "price": 1930},
+        {"id": "concentrated_energy", "name": "Concentrated Energy", "price": 2020},
+        {"id": "oracle", "name": "Oracle", "price": 2080},
+        {"id": "immortality", "name": "Immortality", "price": 2120}
+      ], "description": "Cooldown reduction dan healing power"}
+    ],
+    "emblem": {"name": "Support", "tier": 3, "talents": ["Focusing Mark", "Pull Yourself Together"]},
+    "spells": ["Flicker", "Healing Spell"],
+    "counters": ["selena", "guinevere", "vale"],
+    "strong_against": ["layla", "miya", "aldous"],
+    "tips": [
+      "Ulti ke carry saat mereka dalam bahaya — jangan tunggu mereka hampir mati",
+      "Gunakan S2 untuk lock target yang chase carry kamu",
+      "Spam S1 untuk heal terus menerus",
+      "Kommunikasi dengan carry tentang kapan akan Ult ke mereka"
+    ],
+    "combos": [
+      {
+        "id": "angela_protect_combo",
+        "name": "Carry Protection Combo",
+        "description": "Combo untuk melindungi carry dari bahaya",
+        "steps": [
+          {"order": 1, "skill_key": "SKILL_2", "description": "Puppet-On-A-String ke musuh yang menyerang carry", "timing": "Saat carry diserang"},
+          {"order": 2, "skill_key": "ULTIMATE", "description": "Heartguard ke carry yang dalam bahaya", "timing": "Saat carry HP < 60%"},
+          {"order": 3, "skill_key": "SKILL_1", "description": "Spam Love Waves untuk heal carry dari dalam", "timing": "Terus menerus saat bersatu"}
+        ],
+        "difficulty": "MODERATE",
+        "notes": "Timing Ult sangat penting — terlambat = carry mati sebelum kamu tiba"
+      }
+    ]
+  },
+  {
+    "id": "harith",
+    "name": "Harith",
+    "title": "Time Traveler",
+    "roles": ["MAGE"],
+    "lanes": ["MID"],
+    "difficulty": "HARD",
+    "description": "Harith adalah mage mobility tinggi dengan burst damage yang kuat. Cooldown reduction pasifnya membuatnya bisa spam skill terus menerus.",
+    "icon_url": "",
+    "skills": [
+      {"key": "PASSIVE", "name": "Key Insight", "description": "Setiap skill hit mengurangi cooldown Ult. Maximum stack memberikan buff damage.", "cooldown": [], "mana_cost": [], "type": "PASSIVE"},
+      {"key": "SKILL_1", "name": "Synchro Fission", "description": "Harith memanggil clone yang memberikan damage AoE.", "cooldown": [10, 9, 8, 7, 6, 5], "mana_cost": [80, 80, 80, 80, 80, 80], "type": "ACTIVE"},
+      {"key": "SKILL_2", "name": "Chrono Dash", "description": "Harith dash ke arah tertentu dan menyerap efek dari musuh.", "cooldown": [18, 17, 16, 15, 14, 13], "mana_cost": [60, 60, 60, 60, 60, 60], "type": "ACTIVE"},
+      {"key": "ULTIMATE", "name": "zap!!", "description": "Harith melompat-lompat memberikan damage ke musuh dalam area. Cooldown bisa di-reset oleh passive.", "cooldown": [40, 35, 30], "mana_cost": [100, 100, 100], "type": "ACTIVE"}
+    ],
+    "builds": [
+      {"id": "harith_full", "name": "Full Magic Build", "phase": "LATE", "items": [
+        {"id": "arcane_boots", "name": "Arcane Boots", "price": 720},
+        {"id": "lightning_truncheon", "name": "Lightning Truncheon", "price": 2000},
+        {"id": "feather_of_heaven", "name": "Feather of Heaven", "price": 2100},
+        {"id": "concentrated_energy", "name": "Concentrated Energy", "price": 2020},
+        {"id": "holy_crystal", "name": "Holy Crystal", "price": 2180},
+        {"id": "divine_glaive", "name": "Divine Glaive", "price": 1970}
+      ], "description": "Maximum magic burst dengan CDR"}
+    ],
+    "emblem": {"name": "Mage", "tier": 3, "talents": ["Catastrophe", "Magic Worship"]},
+    "spells": ["Flicker", "Aegis"],
+    "counters": ["gusion", "karina", "lancelot"],
+    "strong_against": ["layla", "miya", "aldous"],
+    "tips": [
+      "Pasif reset Ult — spam terus untuk maintain pressure",
+      "S2 bisa digunakan untuk dash melewati tembok",
+      "Dalam team fight, prioritas melompat ke banyak target",
+      "Harith sangat lemah terhadap hard CC — beli spell Purify saat lawan punya banyak CC"
+    ],
+    "combos": [
+      {
+        "id": "harith_tf_combo",
+        "name": "Team Fight Combo",
+        "description": "Combo untuk team fight menggunakan Ultimate spam",
+        "steps": [
+          {"order": 1, "skill_key": "SKILL_2", "description": "Chrono Dash ke posisi yang aman namun dekat tim musuh", "timing": "Saat team fight dimulai"},
+          {"order": 2, "skill_key": "SKILL_1", "description": "Synchro Fission untuk stack passive", "timing": "Setelah dash"},
+          {"order": 3, "skill_key": "ULTIMATE", "description": "zap!! — lompat ke grup musuh terbesar", "timing": "Saat passive stack penuh"},
+          {"order": 4, "skill_key": "SKILL_1", "description": "Ulangi S1 untuk stack dan reset Ult lebih cepat", "timing": "Terus menerus"}
+        ],
+        "difficulty": "HARD",
+        "notes": "Kunci Harith adalah memaintain passive stack agar Ult selalu ready"
+      }
+    ]
+  },
+  {
+    "id": "leomord",
+    "name": "Leomord",
+    "title": "Midnight Paladin",
+    "roles": ["FIGHTER"],
+    "lanes": ["EXP"],
+    "difficulty": "MODERATE",
+    "description": "Leomord adalah fighter yang mengendarai kuda (Phantom Steed) saat menggunakan Ultimate. Di atas kuda, ia mendapat bonus stats besar dan kemampuan bergerak lebih cepat.",
+    "icon_url": "",
+    "skills": [
+      {"key": "PASSIVE", "name": "Decimation", "description": "Saat HP di bawah 30%, serangan Leomord mendapat True Damage.", "cooldown": [], "mana_cost": [], "type": "PASSIVE"},
+      {"key": "SKILL_1", "name": "Momentum", "description": "Leomord mengumpulkan energi lalu melepaskan serangan kuat ke depan.", "cooldown": [12, 11, 10, 9, 8, 7], "mana_cost": [80, 80, 80, 80, 80, 80], "type": "ACTIVE"},
+      {"key": "SKILL_2", "name": "Decimation Assault", "description": "Leomord membuat area yang memberikan damage. Saat di atas kuda, area menjadi lebih besar.", "cooldown": [8, 7.5, 7, 6.5, 6, 5.5], "mana_cost": [60, 60, 60, 60, 60, 60], "type": "ACTIVE"},
+      {"key": "ULTIMATE", "name": "Phantom Steed", "description": "Leomord memanggil kudanya. Di atas kuda mendapat bonus kecepatan, HP, dan serangan. Musuh yang terkena serangan masu kuda ikut terkena efek.", "cooldown": [50, 46, 42], "mana_cost": [100, 100, 100], "type": "ACTIVE"}
+    ],
+    "builds": [
+      {"id": "leomord_full", "name": "Full Build", "phase": "LATE", "items": [
+        {"id": "warrior_boots", "name": "Warrior Boots", "price": 690},
+        {"id": "endless_battle", "name": "Endless Battle", "price": 2470},
+        {"id": "blade_of_despair", "name": "Blade of Despair", "price": 3010},
+        {"id": "brute_force", "name": "Brute Force Breastplate", "price": 2060},
+        {"id": "malefic_roar", "name": "Malefic Roar", "price": 2060},
+        {"id": "immortality", "name": "Immortality", "price": 2120}
+      ], "description": "Balance damage dan survival dengan True Damage passive"}
+    ],
+    "emblem": {"name": "Fighter", "tier": 3, "talents": ["Festival of Blood", "Disabling Strike"]},
+    "spells": ["Inspire", "Flicker"],
+    "counters": ["gusion", "ling", "lancelot"],
+    "strong_against": ["layla", "miya", "irithel"],
+    "tips": [
+      "Simpan Ultimate untuk team fight atau chase",
+      "Di atas kuda, Leomord sangat kuat — jangan waste waktu Ultimate",
+      "Passive True Damage sangat berbahaya saat HP rendah",
+      "S1 membutuhkan charging — hindari penggunaan saat dalam bahaya"
+    ],
+    "combos": [
+      {
+        "id": "leomord_horse_combo",
+        "name": "Mounted Combat Combo",
+        "description": "Combo menggunakan kuda untuk maximum damage",
+        "steps": [
+          {"order": 1, "skill_key": "ULTIMATE", "description": "Aktifkan Phantom Steed untuk mount kuda", "timing": "Saat akan engage atau team fight"},
+          {"order": 2, "skill_key": "SKILL_2", "description": "Decimation Assault untuk area damage lebih besar saat di kuda", "timing": "Di tengah musuh"},
+          {"order": 3, "skill_key": "SKILL_1", "description": "Momentum untuk damage besar ke target utama", "timing": "Saat sudah lock target"},
+          {"order": 4, "skill_key": "SKILL_2", "description": "Ulangi S2 untuk maintain pressure", "timing": "Selama kuda masih aktif"}
+        ],
+        "difficulty": "MODERATE",
+        "notes": "Durasi kuda terbatas — gunakan semua skill saat masih mounted!"
+      }
+    ]
+  }
+]
